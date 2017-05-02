@@ -15,3 +15,8 @@ A:     fire
 
 B:     Jump
 
+UP:    fx-on
+
+DOWN:  fx-off
+
+

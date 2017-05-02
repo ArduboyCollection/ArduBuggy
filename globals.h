@@ -2,10 +2,12 @@
 #define GLOBALS_H
 
 #include <Arduboy2.h>
+#include <ArduboyTones.h>
 #include "gfx.h"
 
 Arduboy2 arduboy;
 Sprites sprites;
+ArduboyTones sound(arduboy.audio.enabled);
 
 byte gamestate = 0;
 byte level = 1;
@@ -38,7 +40,7 @@ byte xShake = 0;
 boolean hole = false;
 byte contSal = 0;
 boolean rokon = false;
-int rockx = 128;
+int rockx = 140;
 boolean rockExp = false;
 byte rockexptime = 0;
 boolean alienon = false;
@@ -70,8 +72,9 @@ byte minutes = 0;
 boolean win = false;
 
 
+
 int ster[] = {0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0};
-int jumph[] = {-4, -3, -2, -1, -1, 0, 0 ,0 ,0 , 1, 1, 2, 3, 4, 1,-0, -1};
+int jumph[] = { -4, -3, -2, -1, -1, 0, 0 , 0 , 0 , 1, 1, 2, 3, 4, 1, -0, -1};
 int sfx[] = {0, 30, 50, 90, 120, 150, 170, 200, };
 byte sfy[] = {40, 10, 30, 10, 40, 10, 30, 20, };
 byte sal[] = {0, 1, 2, 3,};
