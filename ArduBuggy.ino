@@ -7,10 +7,8 @@
 
 void setup() {
   arduboy.begin();
-  arduboy.flashlight();
-  arduboy.systemButtons();
   arduboy.setFrameRate(60);
-  arduboy.audio.begin();
+  arduboy.initRandomSeed();
 }
 
 void loop() {
@@ -74,15 +72,15 @@ void loop() {
       if (tempo2 > tempo3) {
         minutes = tempo2 / 60;
         seconds = tempo2 - minutes * 60;
-        arduboy.digitalWriteRGB(BLUE_LED, LOW);
+        arduboy.digitalWriteRGB(BLUE_LED, RGB_ON);
         delay(400);
-        arduboy.digitalWriteRGB(BLUE_LED, HIGH);
-        arduboy.digitalWriteRGB(RED_LED, LOW);
+        arduboy.digitalWriteRGB(BLUE_LED, RGB_OFF);
+        arduboy.digitalWriteRGB(RED_LED, RGB_ON);
         delay(400);
-        arduboy.digitalWriteRGB(RED_LED, HIGH);
-        arduboy.digitalWriteRGB(GREEN_LED, LOW);
+        arduboy.digitalWriteRGB(RED_LED, RGB_OFF);
+        arduboy.digitalWriteRGB(GREEN_LED, RGB_ON);
         delay(400);
-        arduboy.digitalWriteRGB(GREEN_LED, HIGH);
+        arduboy.digitalWriteRGB(GREEN_LED, RGB_OFF);
         delay(1000);
         arduboy.setCursor(14, 30);
         arduboy.setTextSize(2);

@@ -5,7 +5,6 @@
 #include <ArduboyTones.h>
 #include "gfx.h"
 
-
 Arduboy2 arduboy;
 Sprites sprites;
 ArduboyTones sound(arduboy.audio.enabled);

@@ -3,7 +3,6 @@
 
 #include "globals.h"
 
-
 void pres() {
   sound.noTone();
   if (prey <= 7) {

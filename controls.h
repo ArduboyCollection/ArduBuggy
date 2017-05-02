@@ -3,7 +3,6 @@
 
 #include "globals.h"
 
-
 void speedBuggy() {
   veloc = posx / 3 + 1 ;
   if (veloc > 9)veloc = 9;

@@ -1,7 +1,6 @@
 #ifndef GFX_H
 #define GFX_H
 
-
 const uint8_t Ardu[] PROGMEM =
 {
   // width, height,
