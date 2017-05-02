@@ -436,7 +436,7 @@ void showScore() {
     hard = 3;
     maxAlienY = 30;
   }
-  if (score >= 10000 && score < 100000) arduboy.setCursor(98 - xShake, 0);
+  if (score >= 10000 && score < 30000) arduboy.setCursor(98 - xShake, 0);
 
   if (score >= 20000) gamestate = 3;
 

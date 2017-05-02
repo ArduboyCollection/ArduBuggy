@@ -6,14 +6,11 @@
 #include "sounds.h"
 
 void setup() {
-  arduboy.boot();
+  arduboy.begin();
   arduboy.flashlight();
   arduboy.systemButtons();
   arduboy.setFrameRate(60);
-  arduboy.audio.on();
-  pinMode(GREEN_LED, OUTPUT);
-  pinMode(RED_LED, OUTPUT);
-  pinMode(BLUE_LED, OUTPUT);
+  arduboy.audio.begin();
 }
 
 void loop() {
@@ -77,15 +74,15 @@ void loop() {
       if (tempo2 > tempo3) {
         minutes = tempo2 / 60;
         seconds = tempo2 - minutes * 60;
-        digitalWrite(BLUE_LED, LOW);
+        arduboy.digitalWriteRGB(BLUE_LED, LOW);
         delay(400);
-        digitalWrite(BLUE_LED, HIGH);
-        digitalWrite(RED_LED, LOW);
+        arduboy.digitalWriteRGB(BLUE_LED, HIGH);
+        arduboy.digitalWriteRGB(RED_LED, LOW);
         delay(400);
-        digitalWrite(RED_LED, HIGH);
-        digitalWrite(GREEN_LED, LOW);
+        arduboy.digitalWriteRGB(RED_LED, HIGH);
+        arduboy.digitalWriteRGB(GREEN_LED, LOW);
         delay(400);
-        digitalWrite(GREEN_LED, HIGH);
+        arduboy.digitalWriteRGB(GREEN_LED, HIGH);
         delay(1000);
         arduboy.setCursor(14, 30);
         arduboy.setTextSize(2);
