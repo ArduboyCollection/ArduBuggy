@@ -94,7 +94,7 @@ void percorso() {
 
     /////// Check if front and rear tyre hit a terrain's hole //////
 
-    if (ster[(posx + 35) / 8] == 2 && jump == false && hole == false) {
+    if (ster[(posx + 32) / 8] == 2 && jump == false && hole == false) {
       score -= 200;
       bump1 = -2;
       shake = true;
@@ -111,7 +111,7 @@ void percorso() {
       sound.tone(NOTE_C2, 100);
     }
 
-    if (ster[(posx + 35) / 8] == 3 && jump == false && hole == false) {
+    if (ster[(posx + 32) / 8] == 3 && jump == false && hole == false) {
       score -= 300;
       bump1 = -3;
       shake = true;
@@ -350,7 +350,7 @@ void aliens() {
 
 //####### ROCK #######
 void rock() {
-  if (arduboy.everyXFrames(60) && rockx == 140 && ster[16] < 2) {
+  if (arduboy.everyXFrames(60) && rockx == 128 && ster[16] < 2) {
     rokon = random(2);
   }
 
@@ -359,7 +359,7 @@ void rock() {
     arduboy.fillTriangle(rockx + 3, 57, rockx + 10, 57, rockx + 7, 48, WHITE);
 
     if (rockx == -10) {
-      rockx = 140;
+      rockx = 128;
       shot++;
       rokon = false;
     }
@@ -370,7 +370,7 @@ void rock() {
     rockexptime++;
     if (rockexptime == 30) {
       rockexptime = 0;
-      rockx = 140;
+      rockx = 128;
       rockstep = 2;
       rockExp = false;
       shot++;
